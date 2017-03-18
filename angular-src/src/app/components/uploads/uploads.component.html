@@ -1,0 +1,20 @@
+<h2 class="page-header">Upload Card</h2>
+<form (submit)="onUploadsSubmit()">
+  <div class="form-group">
+    <label>Player Name</label>
+    <input type="text" [(ngModel)]="cardname" name="cardname" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Card Info</label>
+    <input type="text" [(ngModel)]="cardinfo" name="cardinfo" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Attributes</label>
+    <input type="text" [(ngModel)]="attribute" name="attribute" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Image Name</label>
+    <input type="text" [(ngModel)]="imagename" name="imagename" class="form-control">
+  </div>
+  <input type="submit" class="btn btn-primary" value="Submit">
+</form>
