@@ -5,6 +5,8 @@ const cors = require('cors');
 const passport = require('passport');
 const mongoose = require('mongoose');
 const config = require('./config/database');
+const User = require('./models/user');
+const Card = require('./models/card');
 
 // Connect To Database
 mongoose.connect(config.database);
@@ -46,6 +48,16 @@ app.use('/users', users);
 // Index Route
 app.get('/', (req, res) => {
   res.send('Invalid Endpoint');
+});
+
+//Dashboard
+
+app.get('/dashboard', passport.authenticate('jwt', {session:false}), function(req,res) {
+  Card.find(function(err, cards){
+    if (err)
+      res.send(err);
+    res.json(cards);
+  });
 });
 
 app.get('*', (req, res) => {

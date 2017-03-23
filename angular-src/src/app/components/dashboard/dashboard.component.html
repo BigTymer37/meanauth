@@ -1,2 +1,7 @@
-<h2 class="page-header"></h2>
-<p>Welcome to Mean Cards T.O</p>
+<div *ngIf="user">
+  <h2 class="page-header">{{card.cardname}}</h2>
+  <ul class="list-group">
+    <li class="list-group-item">Username: {{card.cardinfo}}</li>
+    <li class="list-group-item">Email: {{card.attribute}}</li>
+  </ul>
+</div>

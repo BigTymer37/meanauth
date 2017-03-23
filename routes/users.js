@@ -4,7 +4,8 @@ const passport = require('passport');
 const jwt = require('jsonwebtoken');
 const config = require('../config/database');
 const User = require('../models/user');
-const Card = require('../models/card')
+const Card = require('../models/card');
+const mongoose = require('mongoose');
 
 // Register
 router.post('/register', (req, res, next) => {
@@ -78,6 +79,8 @@ router.post('/authenticate', (req, res, next) => {
     });
   });
 });
+
+
 
 // Profile
 router.get('/profile', passport.authenticate('jwt', {session:false}), (req, res, next) => {
