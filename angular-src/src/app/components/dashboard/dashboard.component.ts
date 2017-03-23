@@ -9,13 +9,13 @@ import {Router} from '@angular/router';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  card: Object;
+  cards: Object;
 
   constructor(private authService:AuthService, private router:Router) { }
 
   ngOnInit() {
     this.authService.getCard().subscribe(dashboard => {
-      this.card = dashboard.card;
+      this.cards = dashboard.cards;
     },
     err => {
       console.log(err);

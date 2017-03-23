@@ -16,7 +16,7 @@ import {ValidateService} from './services/validate.service';
 import {FlashMessagesModule} from 'angular2-flash-messages';
 import {AuthService} from './services/auth.service';
 import {AuthGuard} from './guards/auth.guard';
-import { UploadsComponent } from './components/uploads/uploads.component'
+import {UploadsComponent} from './components/uploads/uploads.component'
 
 const appRoutes: Routes = [
   {path:'', component: HomeComponent},
@@ -24,7 +24,7 @@ const appRoutes: Routes = [
   {path:'login', component: LoginComponent},
   {path:'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
   {path:'profile', component: ProfileComponent, canActivate:[AuthGuard]},
-  {path:'uploads', component: UploadsComponent}
+  {path:'uploads', component: UploadsComponent, canActivate:[AuthGuard]}
 ]
 
 

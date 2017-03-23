@@ -52,11 +52,11 @@ app.get('/', (req, res) => {
 
 //Dashboard
 
-app.get('/dashboard', passport.authenticate('jwt', {session:false}), function(req,res) {
+app.get('/dashboard', passport.authenticate('jwt', {session:false}), function(req,res, next) {
   Card.find(function(err, cards){
     if (err)
       res.send(err);
-    res.json(cards);
+    res.json({cards});
   });
 });
 

@@ -1,7 +1,9 @@
-<div *ngIf="user">
-  <h2 class="page-header">{{card.cardname}}</h2>
+<div *ngIf="cards">
+  <h2 class="page-header">{{cards[0].imagename}}</h2>
   <ul class="list-group">
-    <li class="list-group-item">Username: {{card.cardinfo}}</li>
-    <li class="list-group-item">Email: {{card.attribute}}</li>
+    <li class="list-group-item">Player Name: {{cards[0].cardname}}</li>
+    <li class="list-group-item">Card Info: {{cards[0].cardinfo}}</li>
+    <li class="list-group-item">Attributes: {{cards[0].attribute}}</li>
+
   </ul>
 </div>
