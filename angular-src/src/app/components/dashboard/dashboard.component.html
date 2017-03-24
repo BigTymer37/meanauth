@@ -1,9 +1,24 @@
-<div *ngIf="cards">
-  <h2 class="page-header">{{cards[0].imagename}}</h2>
-  <ul class="list-group">
+
+<div class="row" *ngIf="cards">
+  <div class="col s4" *ngIf="cards">
+    <img src="{{cards[1].imagename}}"width="240px" height="340px"/>
+    <li class="list-group-item">Player Name: {{cards[1].cardname}}</li>
+    <li class="list-group-item">Card Info: {{cards[1].cardinfo}}</li>
+    <li class="list-group-item">Attributes: {{cards[1].attribute}}</li>
+    <br>
+  </div>
+  <div class="col s4" *ngIf="cards">
+    <img src="{{cards[2].imagename}}" width="340px" height="240px" />
+    <li class="list-group-item">Player Name: {{cards[2].cardname}}</li>
+    <li class="list-group-item">Card Info: {{cards[2].cardinfo}}</li>
+    <li class="list-group-item">Attributes: {{cards[2].attribute}}</li>
+    <br>
+  </div>
+  <div class="col s4" *ngIf="cards">
+    <img src="{{cards[0].imagename}}" width="336px" height="240px"/>
     <li class="list-group-item">Player Name: {{cards[0].cardname}}</li>
     <li class="list-group-item">Card Info: {{cards[0].cardinfo}}</li>
     <li class="list-group-item">Attributes: {{cards[0].attribute}}</li>
-
-  </ul>
+    <br>
+  </div>
 </div>

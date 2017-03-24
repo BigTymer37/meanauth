@@ -1,0 +1,63 @@
+h1 {
+color: #FFF;
+font-size: 50px;
+font-family: Georgia;
+text-align: center;
+}
+
+h3 {
+color: #FFF;
+font-size: 40px;
+font-family: Georgia;
+text-align: center;
+}
+
+p {
+color: #FFF;
+font-size: 25px;
+font-family: Georgia;
+text-align: center;
+}
+
+div {
+  color: #FFF;
+  font-family: Georgia;
+  text-align: center;
+}
+
+a {
+  font-size: 17px;
+}
+
+.caption {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.65);
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  font-style: italic;
+  line-height: 14px;
+  margin-left: 20px;
+  padding: 10px;
+  position: relative;
+  top: 95%;
+  width: 60%;
+}
+
+.content {
+  padding: 40px;
+}
+
+.image {
+  background-image: url("http://localhost:4200/leafs1967.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 820px;
+}
+
+div > p {
+  text-align: center;
+}
+p, #caption{
+  text-align: left;
+}
